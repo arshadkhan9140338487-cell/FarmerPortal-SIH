@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Admin pannal</h3>
+    <% for(let user of users){ %>
+        <div class="data"><p>Name: <%= user.name %></p>
+        <p>address: <%= user.address %></p>
+        <p>phone no: <%= user.phoneNo %></p>
+        <p>Crop Name: <%= user.cropName %> </p>
+
+        <p>Crop Estimated value: <%= user.cropValue %></p></div>
+        <br>
+        <form action="/update/status" method="GET"><button>Give Appointment</button></form>
+        <br>
+    <%  } %>
+</body>
+</html>
